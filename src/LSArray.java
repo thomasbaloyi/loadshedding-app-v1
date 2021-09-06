@@ -2,20 +2,19 @@ import java.util.Arrays;
 
 /**
  * An LSArray is an array data structure that is specially
- * designed to work for the 'LSArrayApp.java' program.
+ * designed to work for the 'LSArrayApp' command-line based application.
  *
  * For simplicity; LSArray only stores String data items.
  *
  * @author Thomas Baloyi
- * @version 1
  * 28.02.2020
  */
 public class LSArray {
 
-    /* Size of the LSArray data structure. */
+    /** Size of the LSArray data structure. */
     private int size;
     
-    /* Array for this LSArray. */
+    /** Array instance for this LSArray. */
     private String[] array;
     
     /**
@@ -25,36 +24,45 @@ public class LSArray {
      */
     private int count;
     
-    /* Keeps count of the number of comparisons. */
+    /** Keeps count of the number of comparisons. */
     private int opCount;
     
-    /* Constructor. */    
+    /** Creates a new LSArray of given size. */
     public LSArray(int size) {
         this.size = size;
         array = new String[size];
         count = 0;
     }
-    
-    /* Returns the size of the array. */
+
+    /**
+     * @return the size of this LSArray.
+     */
     public int getSize() {
         return (this.size);
     }
-    
-    /* Returns the number of comparison operation. */
+
+    /**
+     * @return the number of comparison operations.
+     */
     public int getOpCount() {
         return (this.opCount);
     }
 
-    /* Adds dataItem to this LSArray. */
+    /**
+     * Adds dataItem to this LSArray.
+     *
+     * @param dataItem
+     */
     public void add(String dataItem) {
         array[count] = dataItem;
         count++;
     } 
     
     /**
-     * Returns a string of data item that match with the parameter.
+     * Returns a string of data item(s) that match with the parameter.
+     *
      * This method is specialised to handle constraints given by the
-     * dataset provided by the LSArrayApp.
+     * dataset provided for the LSArrayApp.
      *
      * @param 	dataItem the 'key'.
      * @returns match a string of areas that matches with key.

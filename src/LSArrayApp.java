@@ -29,7 +29,7 @@ import java.util.Arrays;
     /** The number of data items to be fed into LSarray. */
     private static int lsArraySize = 2976;
     
-    /* Data item that matches with key */
+    /** Data item that matches with key */
     private static String areaAffected;
    
     private static boolean notFound;
@@ -101,7 +101,7 @@ import java.util.Arrays;
          }
      }
      
-     /* Prints the number of comparison operations involving keys. */
+     /** Prints the number of comparison operations involving keys. */
      public static void printOpCount() {
          System.out.println("Number of comparison operations: " + dataItems.getOpCount());
      }
